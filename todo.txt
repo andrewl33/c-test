@@ -1,0 +1,18 @@
+Comparisons
+-Match
+-closeTo
+-Greater than
+-Less than
+-within
+
+-length of
+
+-type
+
+-size
+
+-exist
+
+-includes
+
+-not
