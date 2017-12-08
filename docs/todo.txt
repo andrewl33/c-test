@@ -16,3 +16,16 @@ Comparisons
 -includes
 
 -not
+
+
+Data Flow
+
+A. Input Class
+  1. Find Class.test.cpp
+  2. Take the Classname, and store name
+  3. Find first "it", should store 
+B. Expect
+  1. takes method and runs it, but after the comparison operators
+C. Comparisons
+  1. takes a value (or values) and compares them to the expect
+D. Output all the values
