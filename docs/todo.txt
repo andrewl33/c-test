@@ -29,3 +29,8 @@ B. Expect
 C. Comparisons
   1. takes a value (or values) and compares them to the expect
 D. Output all the values
+
+
+Later: 
+  Add before and after
+  
