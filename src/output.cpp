@@ -1,14 +1,9 @@
 #include <iomanip>
 #include <iostream>
-
 #include "output.hpp"
+
 // outputs results of tests to console
-void output(level l, bool isCheck, std::string statement) {
-  // user should really provide a statement
-  // if (statement.empty()) {
-  //   std::cout<< "output(): did not detect a statement" << std::endl;
-  // }
-  
+void output(level l, bool isCheck, std::string statement) {  
   const std::string CHECK_MARK = "\u2713";
   const std::string CROSS_MARK = "\u2717";
   
