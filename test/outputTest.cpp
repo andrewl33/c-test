@@ -15,9 +15,9 @@ TestItem trueTestArray[] = {
 };
 
 TestItem falseTestArray[] = {
-  { FILE_NAME, false, "This should be a check on level one"},
-  { METHOD, false, "This should be a check on level two"},
-  { EXPECT, false, "This should be a check on level three"}
+  { FILE_NAME, false, "This should be a cross on level one"},
+  { METHOD, false, "This should be a cross on level two"},
+  { EXPECT, false, "This should be a cross on level three"}
 };
 
 
