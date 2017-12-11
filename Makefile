@@ -1,14 +1,17 @@
-test: objects/test.o objects/outputTest.o objects/output.o
-	g++ test.o outputTest.o output.o -o test/test.out
+CC=g++
+C_FLAGS= -Wall
+TEST_SOURCES=test/test.cpp test/outputTest.cpp src/output.cpp
+TEST_DEPS= test/outputTest.h src/output.h
+TEST_OBJECTS=$(TEST_SOURCES:.cpp=.o)
+TEST_OUT=test.out
 
-objects/test.o: test/test.cpp
-	g++ -c test/test.cpp 
+test/test.out: $(TEST_SOURCES) $(TEST_OUT)
+    
+$(TEST_OUT): $(TEST_OBJECTS) 
+	$(CC) $(C_FLAGS) $(TEST_OBJECTS) -o $@
 
-objects/outputTest.o: test/outputTest.cpp test/outputTest.hpp
-	g++ -c test/outputTest.cpp test/outputTest.hpp 
-
-objects/output.o: src/output.cpp src/output.hpp
-	g++ -c src/output.cpp src/output.hpp 
+%.o: %.cpp $(TEST_DEPS)
+	$(CC) $(C_FLAGS) -c $< -o $@
 
 clean:
-	rm  *.o
+	rm src/*.o test/*.o
