@@ -41,6 +41,7 @@
     "cwctype": "cpp",
     "iomanip": "cpp",
     "sstream": "cpp",
-    "tuple": "cpp"
+    "tuple": "cpp",
+    "functional": "cpp"
   }
 }

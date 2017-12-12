@@ -3,7 +3,9 @@
 
 #include <string>
 
-enum level { FILE_NAME = 3, METHOD = 5, EXPECT = 7 };
+enum level { CLASS_NAME = 0, METHOD = 3, EXPECT = 5 };
+
+void output(level, std::string);
 
 void output(level, bool, std::string);
 

@@ -4,31 +4,33 @@
 
 struct TestItem {
   level l;
-  bool isCheck;
   std::string statement;
+  bool isCheck;
 };
 
 TestItem trueTestArray[] = {
-  { FILE_NAME, true, "This should be a check on level one"},
-  { METHOD, true, "This should be a check on level two"},
-  { EXPECT, true, "This should be a check on level three"}
+  { CLASS_NAME, "This should be level one"},
+  { METHOD, "This should be level two"},
+  { EXPECT, "This should be a check on level three", true}
 };
 
 TestItem falseTestArray[] = {
-  { FILE_NAME, false, "This should be a cross on level one"},
-  { METHOD, false, "This should be a cross on level two"},
-  { EXPECT, false, "This should be a cross on level three"}
+  { CLASS_NAME, "This should level one"},
+  { METHOD, "This should be level two"},
+  { EXPECT, "This should be a cross on level three", false}
 };
 
 
 void outputTest() {
   std::cout << "OutputTest: Check marks" << std::endl;
-  for (int i = 0; i < 3; i++) {
-    output(trueTestArray[i].l, trueTestArray[i].isCheck, trueTestArray[i].statement);
+  for (int i = 0; i < 2; i++) {
+    output(trueTestArray[i].l, trueTestArray[i].statement);
   }
+  output(trueTestArray[2].l, trueTestArray[2].isCheck, trueTestArray[2].statement);
 
   std::cout << "OutputTest: Cross marks" << std::endl;
-  for (int i = 0; i < 3; i++) {
-    output(falseTestArray[i].l, falseTestArray[i].isCheck, falseTestArray[i].statement);
+  for (int i = 0; i < 2; i++) {
+    output(falseTestArray[i].l, falseTestArray[i].statement);
   }
+  output(falseTestArray[2].l, falseTestArray[2].isCheck, falseTestArray[2].statement);
 }
