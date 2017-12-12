@@ -2,7 +2,7 @@
 #include "outputTest.hpp"
 
 int main() {
-  std::cout << "Output.cpp: " << std::endl;
+  std::cout << "helper.cpp: output " << std::endl;
   outputTest();
   std::cout << "-----------------------------------------------------" << std::endl;
   return 0;

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "outputTest.hpp"
-#include "../src/output.hpp"
+#include "../src/helper.hpp"
 
 struct TestItem {
   level l;

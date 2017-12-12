@@ -1,6 +1,6 @@
 CC=g++
 C_FLAGS= -Wall
-TEST_SOURCES=test/test.cpp test/outputTest.cpp src/output.cpp
+TEST_SOURCES=test/test.cpp test/outputTest.cpp src/helper.cpp
 TEST_DEPS= test/outputTest.h src/output.h
 TEST_OBJECTS=$(TEST_SOURCES:.cpp=.o)
 TEST_OUT=test.out
