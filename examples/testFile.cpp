@@ -9,8 +9,8 @@ testFile
 
 CTest classToTest("Your class name");
 classToTest.it("methodName", "should return true if true",
-    expect(methodToTest(inputMaybe), closeTo(10000, .00001)));
+    is(closeTo(10000, .00001, methodToTest(inputMaybe))));
 
 // for negations
 classToTest.it("methodName", "should return true if true",
-    not(expect(methodToTest(inputMaybe), closeTo(10000, .00001))));
+    not(closeTo(10000, .00001, methodToTest(someInputValue))));
