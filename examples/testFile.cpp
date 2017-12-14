@@ -8,8 +8,17 @@ testFile
 */
 
 CTest classToTest("Your class name");
-classToTest.it("methodName", "should return true if true",
-    is(closeTo(10000, .00001, methodToTest(inputMaybe))));
+classToTest.it(
+    "methodName",
+    test(
+        "should return true if true",
+        is(closeTo(10000, .00001, methodToTest(inputMaybe)))
+    ),
+    test(
+        "should return true if true",
+        is(equalTo(10000, methodToTest(inputMaybe)))
+    )
+    );
 
 // for negations
 classToTest.it("methodName", "should return true if true",

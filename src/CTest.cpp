@@ -1,5 +1,7 @@
+#include <initializer_list>
 #include <iostream>
 #include <string>
+#include <vector>
 #include "CTest.hpp"
 #include "helper.hpp"
 
@@ -21,11 +23,22 @@ std::string CTest::getClassName() {
   return _className;
 }
 
-void CTest::it(std::string methodName, std::string description, bool isExpected) {
-  // print methodName
-  output(METHOD, methodName);
+// // used for a single is, without test() method
+// void CTest::it(std::string methodName, std::string description, bool isExpected) {
+//   // print methodName
+//   output(METHOD, methodName);
 
-  // print expect line
-  output(EXPECT, isExpected, description);
-}
+//   // print expect line
+//   output(EXPECT, isExpected, description);
+// }
 
+// void CTest::it(std::string methodName, std::initializer_list< std::unique_ptr<std::tuple<std::string, bool>> > testCase)
+//   :_testCaseList(testCase) {
+//   // print methodName
+//   output(METHOD, methodName);
+  
+//   // prints list of tests
+//   for(auto* t : testCase) {
+//     output(EXPECT, std::get<bool>(t),std::get<std::string>(t))
+//   }
+// } 

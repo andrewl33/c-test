@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <tuple>
 #include "helper.hpp"
 
 /*******************************************************************
@@ -29,6 +30,14 @@ void output(level l, std::string statement) {
   // print out to the console
   std::cout << std::string(l, ' ') << statement << std::endl;
 }
+
+/*******************************************************************
+ *  test class, used in it() for mutiple tests of the same method
+ * *****************************************************************/
+std::tuple<std::string, bool> test(std::string description, bool isExpected) {
+  // print expect line
+  return std::make_tuple(description, isExpected);
+};
 
 // closeTo
 
