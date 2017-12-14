@@ -1,4 +1,3 @@
-g++ main.cpp CTest.cpp helper.cpp ./test_method/equalTo.hpp -std=c++11
 Comparisons
 -Match
 -closeTo
