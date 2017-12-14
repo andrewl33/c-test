@@ -14,13 +14,15 @@ class CTest {
 private:
   std::string _className = "";
   std::vector< std::tuple<std::string, bool> > _testCaseList; // holds testCases
-  void pushTestCase() {} // ends the parsing of testCases
-public:
-  CTest();
-  CTest(std::string);
 
   void setClassName(std::string);
   std::string getClassName();
+
+  void pushTestCase() {} // ends the parsing of testCases
+  
+public:
+  CTest();
+  CTest(std::string);
 
 /**********************************************************************************
 *    it() is used to describe a single method and collect all its test cases

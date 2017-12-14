@@ -1,7 +1,5 @@
-#include <initializer_list>
 #include <iostream>
 #include <string>
-#include <vector>
 #include "CTest.hpp"
 #include "helper.hpp"
 
@@ -15,7 +13,7 @@ CTest::CTest(std::string className) {
   output(CLASS_NAME, this->getClassName());
 }
 
-// getters and setters, probably uneccessary
+// getters and setters
 void CTest::setClassName(std::string className) {
   _className = className;
 }

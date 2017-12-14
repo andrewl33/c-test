@@ -34,3 +34,5 @@ D. Output all the values
 Later: 
   Add before and after
   
+  In CTest, when there is the wrong amount of args, pretty print
+  something for the user to see where they made it wrong
