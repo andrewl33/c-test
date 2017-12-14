@@ -22,6 +22,9 @@ public:
   void setClassName(std::string);
   std::string getClassName();
 
+/**********************************************************************************
+*    it() is used to describe a single method and collect all its test cases
+* ********************************************************************************/
   template<typename... T>
   void it(std::string methodName, T... testCases) {
     // print methodName

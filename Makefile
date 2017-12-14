@@ -6,8 +6,8 @@ BUILD_DEPS=src/CTest.hpp src/helper.hpp src/test_methods/equalTo.hpp
 BUILD_OBJECTS=$(BUILD_SOURCES:.cpp=.o)
 BUILD_OUT=build.out
 
-TEST_SOURCES=test/test.cpp test/outputTest.cpp src/helper.cpp
-TEST_DEPS= test/outputTest.h src/output.h
+TEST_SOURCES=test/test.cpp test/helperTest.cpp src/helper.cpp
+TEST_DEPS= test/helperTest.hpp src/helper.hpp
 TEST_OBJECTS=$(TEST_SOURCES:.cpp=.o)
 TEST_OUT=test.out
 
@@ -20,7 +20,7 @@ $(BUILD_OUT): $(BUILD_OBJECTS)
 	$(CC) $(C_FLAGS) -c $< -o $@
 
 
-test/test.out: $(TEST_SOURCES) $(TEST_OUT)
+test: $(TEST_SOURCES) $(TEST_OUT)
     
 $(TEST_OUT): $(TEST_OBJECTS) 
 	$(CC) $(C_FLAGS) $(TEST_OBJECTS) -o $@

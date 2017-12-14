@@ -25,7 +25,7 @@ void output(level l, bool isCheck, std::string statement) {
   std::cout << std::string(l, ' ') << (isCheck ? CHECK_MARK : CROSS_MARK) << " " << statement << std::endl;
 }
 
-// outputs description
+// outputs top-level description
 void output(level l, std::string statement) { 
   // print out to the console
   std::cout << std::string(l, ' ') << statement << std::endl;
