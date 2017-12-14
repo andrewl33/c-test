@@ -38,21 +38,3 @@ std::tuple<std::string, bool> test(std::string description, bool isExpected) {
   // print expect line
   return std::make_tuple(description, isExpected);
 };
-
-// closeTo
-
-// equals
-
-// greaterThan
-
-// lessThan
-
-// isSize
-
-// exists
-
-// includes
-
-// not
-
-// within

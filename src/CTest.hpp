@@ -4,7 +4,7 @@
 #include <string>
 #include <tuple>
 #include <vector>
-#include "equalTo.hpp"
+#include "test_methods/equalTo.hpp"
 #include "helper.hpp"
 
 
@@ -13,16 +13,14 @@
 class CTest {
 private:
   std::string _className = "";
-  std::vector< std::tuple<std::string, bool> > _testCaseList;
-  void pushTestCase() {}
+  std::vector< std::tuple<std::string, bool> > _testCaseList; // holds testCases
+  void pushTestCase() {} // ends the parsing of testCases
 public:
   CTest();
   CTest(std::string);
 
   void setClassName(std::string);
   std::string getClassName();
-
-  void it(std::string, std::string, bool);
 
   template<typename... T>
   void it(std::string methodName, T... testCases) {
@@ -48,7 +46,8 @@ public:
     this->pushTestCase(testCases...);
   }
 
-  // testing for a single case
+  // it() with only one test cases
+  // doesn't use the test() method
   void pushTestCase(std::string methodName, bool isOk) {
     _testCaseList.push_back(make_tuple(methodName, isOk));
   }
