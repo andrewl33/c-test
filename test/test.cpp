@@ -1,6 +1,7 @@
 #include <iostream>
 #include "CTestTest.hpp"
 #include "helperTest.hpp"
+#include "testMethodTest.hpp"
 
 int main() {
   /*******************************************************************
@@ -24,5 +25,13 @@ int main() {
   std::cout << "helper.cpp: test " << std::endl;
   testTest();
   std::cout << "-----------------------------------------------------" << std::endl;
-  return 0;
+
+  /*******************************************************************
+  *                         Test Methods
+  * *****************************************************************/
+  std::cout << "Test Methods" << std::endl;
+  testMethodTests();
+  std::cout << "-----------------------------------------------------" << std::endl;
+
+   return 0;
 }
