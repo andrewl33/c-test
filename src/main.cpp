@@ -20,7 +20,11 @@ int main() {
     test(
       "same",
       is(equalTo(124, methodToTest(123)))
-    )  
+    ),
+     test(
+      "same",
+      is(closeTo(124, methodToTest(123), .123145))
+    )    
     );  
   return 0;
 }

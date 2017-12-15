@@ -4,6 +4,7 @@
 #include <string>
 #include <tuple>
 #include <vector>
+#include "test_methods/closeTo.hpp"
 #include "test_methods/equalTo.hpp"
 #include "helper.hpp"
 
