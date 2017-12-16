@@ -52,7 +52,7 @@ ClassName
 ```
 
 ### Getting started
-CTest uses a single object per class, and the assertions normally written:
+CTest uses a single object per class, and the assertions format is:
 ```C++
 Test.it("method_name", 
   test( 
@@ -63,8 +63,7 @@ Test.it("method_name",
 ```
 or
 ```C++
-Test.it("method_name", "should be something", <testing expression>)
-);
+Test.it("method_name", "should be something", <testing expression>);
 ```
 ### Linking your test files
 Include ```"src/CTest.hpp"``` to your test file.
