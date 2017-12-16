@@ -2,12 +2,11 @@
 
 using namespace std;
 
-void same (float a, float b) {
+void same (float a[2], float b) {
   cout << a <<"," << b << endl;
 }
 
 int main () {
-  same(1.0, 2);
-  same(1.2,123123);
-  same(1000,123123123);
+  float s[] = {1,2};
+  same(s, 2);
 }

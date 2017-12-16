@@ -1,11 +1,14 @@
 CC=g++
 C_FLAGS= -Wall -std=c++11
 
-COMMON_SOURCES=src/helper.cpp src/test_methods/equalTo.cpp src/test_methods/closeTo.cpp src/test_methods/lessThan.cpp src/test_methods/greaterThan.cpp 
+COMMON_SOURCES=src/helper.cpp src/test_methods/equalTo.cpp src/test_methods/closeTo.cpp \
+src/test_methods/lessThan.cpp src/test_methods/greaterThan.cpp \
+src/test_methods/within.cpp
 
 BUILD_SOURCES=$(COMMON_SOURCES) src/main.cpp 
 BUILD_DEPS=src/CTest.hpp src/helper.hpp test/testMethodTest.hpp src/test_methods/equalTo.hpp \
-src/test_methods/closeTo.hpp src/test_methods/greaterThan.hpp  src/test_methods/lessThan.hpp
+src/test_methods/closeTo.hpp src/test_methods/greaterThan.hpp  src/test_methods/lessThan.hpp \
+src/test_methods/within.hpp
 BUILD_OBJECTS=$(BUILD_SOURCES:.cpp=.o)
 BUILD_OUT=build.out
 TEST_SOURCES= $(COMMON_SOURCES) test/test.cpp test/CTestTest.cpp src/CTest.cpp \

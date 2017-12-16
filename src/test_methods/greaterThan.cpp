@@ -5,7 +5,6 @@
 
 #include "greaterThan.hpp"
 
-bool greaterThan(short int a, short int b) {return b > a;}
 bool greaterThan(int a,int b) {return b > a;}
 bool greaterThan(long int a, long int b) {return b > a;}
 bool greaterThan(long long int a, long long int b) {return b > a;}

@@ -5,7 +5,6 @@
 
 #include "lessThan.hpp"
 
-bool lessThan(short int a, short int b) {return b < a;}
 bool lessThan(int a,int b) {return b < a;}
 bool lessThan(long int a, long int b) {return b < a;}
 bool lessThan(long long int a, long long int b) {return b < a;}

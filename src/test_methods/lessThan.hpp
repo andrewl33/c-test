@@ -1,7 +1,6 @@
 #ifndef LESS_THAN_HPP
 #define LESS_THAN_HPP
 
-bool lessThan(short int, short int);
 bool lessThan(int,int);
 bool lessThan(long int, long int);
 bool lessThan(long long int, long long int);
