@@ -1,13 +1,11 @@
 Comparisons
--Match
--closeTo
--Greater than
+-Match /
+-closeTo /
+-Greater than /
 -Less than
 -within
 
 -length of
-
--type
 
 -size
 
@@ -15,7 +13,7 @@ Comparisons
 
 -includes
 
--not
+-not /
 
 
 Data Flow
