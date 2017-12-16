@@ -7,5 +7,4 @@ bool within(float[2], double);
 bool within(double[2], double);
 bool within(long double[2], long double);
 
-
 #endif

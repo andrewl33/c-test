@@ -6,6 +6,9 @@
 #include <vector>
 #include "test_methods/closeTo.hpp"
 #include "test_methods/equalTo.hpp"
+#include "test_methods/greaterThan.hpp"
+#include "test_methods/lessThan.hpp"
+#include "test_methods/within.hpp"
 #include "helper.hpp"
 
 

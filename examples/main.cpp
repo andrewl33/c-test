@@ -1,4 +1,4 @@
-#include "CTest.hpp"
+#include "../src/CTest.hpp"
 #include <iostream>
 #include <string>
 
@@ -14,17 +14,17 @@ int main() {
     );
   classToTest.it("methodName2", 
     test(
-      "wow",
-      is(equalTo(123, methodToTest(123)))
+      "method to test should return the same number",
+      is(closeTo(123, methodToTest(123), .0001))
     ),
     test(
-      "same",
-      is(equalTo(124, methodToTest(123)))
+      "should be greater than 100",
+      is(greaterThan(100, methodToTest(123)))
     ),
      test(
-      "same",
-      is(closeTo(124, methodToTest(123), .123145))
+      "should be less than 124",
+      is(lessThan(124, methodToTest(123)))
     )    
-    );  
+  );  
   return 0;
 }

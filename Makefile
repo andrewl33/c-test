@@ -1,11 +1,13 @@
 CC=g++
 C_FLAGS= -Wall -std=c++11
 
-COMMON_SOURCES=src/helper.cpp src/test_methods/equalTo.cpp src/test_methods/closeTo.cpp \
-src/test_methods/lessThan.cpp src/test_methods/greaterThan.cpp \
+FILES_TO_TEST=examples/main.cpp
+
+COMMON_SOURCES=src/CTest.cpp src/helper.cpp src/test_methods/equalTo.cpp \
+src/test_methods/closeTo.cpp src/test_methods/lessThan.cpp src/test_methods/greaterThan.cpp \
 src/test_methods/within.cpp
 
-BUILD_SOURCES=$(COMMON_SOURCES) src/main.cpp 
+BUILD_SOURCES=$(COMMON_SOURCES) $(FILES_TO_TEST)
 BUILD_DEPS=src/CTest.hpp src/helper.hpp test/testMethodTest.hpp src/test_methods/equalTo.hpp \
 src/test_methods/closeTo.hpp src/test_methods/greaterThan.hpp  src/test_methods/lessThan.hpp \
 src/test_methods/within.hpp
@@ -35,4 +37,7 @@ $(TEST_OUT): $(TEST_OBJECTS)
 	$(CC) $(C_FLAGS) -c $< -o $@
 
 clean:
+	rm src/*.o src/test_methods/*.o
+
+clean test:
 	rm src/*.o test/*.o src/test_methods/*.o
